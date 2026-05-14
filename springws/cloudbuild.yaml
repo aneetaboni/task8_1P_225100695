@@ -1,0 +1,15 @@
+steps:
+  - name: 'maven:3.9.6-eclipse-temurin-17'
+    entrypoint: 'mvn'
+    args: ['clean', 'test']
+
+  - name: 'maven:3.9.6-eclipse-temurin-17'
+    entrypoint: 'mvn'
+    args: ['package', '-DskipTests']
+
+artifacts:
+  objects:
+    location: 'gs://YOUR_BUCKET_NAME/build-artifacts/'
+    paths:
+      - 'target/*.war'
+      - 'target/*.jar'

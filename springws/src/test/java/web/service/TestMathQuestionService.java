@@ -9,6 +9,11 @@ public class TestMathQuestionService {
 	public void testTrueAdd() {
 		Assert.assertEquals(3.0, MathQuestionService.q1Addition("1", "2"), 0.001);
 	}
+	@Test
+	public void testWrongAddition() {
+	    MathQuestionService service = new MathQuestionService();
+	    assertEquals(999, service.q1Addition("1", "1"));
+	}
 
 	@Test
 	public void testAddNumber1Empty() {
