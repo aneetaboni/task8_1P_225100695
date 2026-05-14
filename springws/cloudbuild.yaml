@@ -9,7 +9,7 @@ steps:
 
 artifacts:
   objects:
-    location: 'sit707-task72hd-225100695-artifacts'
+    location: 'gs://sit707-task72hd-225100695-artifacts/build-artifacts/'
     paths:
       - 'target/*.war'
       - 'target/*.jar'
